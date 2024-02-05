@@ -84,7 +84,6 @@ body {
 }
 .wrapper .animated-box {
   height: 272px;
-  width: 100%;
 }
 .wrapper .animated-box .track-horizontal {
   white-space: nowrap;
@@ -103,6 +102,12 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 112%; /* 35.84px */
+}
+.wrapper .animated-box .animated-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #000;
 }
 .wrapper .banner-text__special {
   border-radius: 18px;
@@ -133,7 +138,7 @@ body {
     transform: translateX(0%); /* Boshlang'ich xatdan o'ngga ko'chirish */
   }
   to {
-    transform: translateX(-50%); /* Oxirgi xatdan chapga ko'chirish */
+    transform: translateX(-46%); /* Oxirgi xatdan chapga ko'chirish */
   }
 }
 

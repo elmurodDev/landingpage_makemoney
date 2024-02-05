@@ -40,13 +40,13 @@ body {
 
   .animated-box {
     height: 272px;
-    width: 100%;
 
     .track-horizontal {
       white-space: nowrap;
       will-change: transform;
       animation: morquee-horizontal 15s linear infinite;
       @include adaptive-value("gap", 32, 14);
+
       .marquee-text {
         color: #9C9C9C;
         font-size: 32px;
@@ -56,6 +56,12 @@ body {
       }
     }
 
+    .animated-circle {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #000;
+    }
   }
 
 
@@ -94,7 +100,7 @@ body {
     transform: translateX(0%); /* Boshlang'ich xatdan o'ngga ko'chirish */
   }
   to {
-    transform: translateX(-50%); /* Oxirgi xatdan chapga ko'chirish */
+    transform: translateX(-46%); /* Oxirgi xatdan chapga ko'chirish */
   }
 }
 
