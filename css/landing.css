@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +42,99 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+  overflow-x: hidden;
+}
+
+.wrapper .nav-link__item {
+  padding: 12px 16px;
+}
+.wrapper .site-logo__item {
+  width: 140px;
+  object-fit: cover;
+  overflow: visible;
+}
+.wrapper .nav-toggle__icon {
+  width: 26px;
+  height: 26px;
+}
+.wrapper .banner-desc .seo-text {
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 112%; /* 67.2px */
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+@media (max-width: 1180px) {
+  .wrapper .banner-desc .seo-text {
+    font-size: calc(20px + 60 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .banner-try {
+  color: #9C9C9C;
+  font-size: 24px;
+}
+@media (max-width: 1180px) {
+  .wrapper .banner-try {
+    font-size: calc(12px + 12 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .animated-text {
+  display: flex;
+  flex-direction: row;
+  font-size: 32px;
+  gap: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 112%; /* 35.84px */
+  color: #9C9C9C;
+  white-space: nowrap;
+  animation: moveRight 15s linear infinite;
+}
+@media (max-width: 1180px) {
+  .wrapper .animated-text {
+    font-size: calc(14px + 18 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1180px) {
+  .wrapper .animated-text {
+    gap: calc(14px + 18 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .banner-text__special {
+  border-radius: 18px;
+  border: 8px solid #E7D4FF;
+  padding: 0 2px;
+}
+@media (max-width: 1200px) {
+  .wrapper .site-logo__item {
+    width: 139px;
+    height: 20px;
+  }
+  .wrapper .nav-toggle__icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .wrapper .site-logo__item {
+    width: 110px;
+  }
+  .wrapper .nav-toggle__icon {
+    width: 26px;
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(0%); /* Boshlang'ich xatdan o'ngga ko'chirish */
+  }
+  to {
+    transform: translateX(-90%); /* Oxirgi xatdan chapga ko'chirish */
+  }
 }
 
 /*# sourceMappingURL=landing.css.map */

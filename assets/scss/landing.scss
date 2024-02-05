@@ -1,1 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
 @import "./normalize";
+@import "./mixins";
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  .nav-link__item {
+    padding: 12px 16px;
+  }
+
+  .site-logo__item {
+    width: 140px;
+    object-fit: cover;
+    overflow: visible;
+  }
+
+  .nav-toggle__icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .banner-desc {
+    .seo-text {
+      @include adaptive-value('font-size', 80, 20);
+      text-transform: uppercase;
+      line-height: 112%; /* 67.2px */
+      font-weight: 600;
+      letter-spacing: -3px;
+    }
+  }
+
+  .banner-try {
+    color: #9C9C9C;
+    @include adaptive-value('font-size', 24, 12);
+  }
+
+  .animated-text {
+    display: flex;
+    flex-direction: row;
+    @include adaptive-value('font-size', 32, 14);
+    @include adaptive-value('gap', 32, 14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 112%; /* 35.84px */
+    color: #9C9C9C;
+    white-space: nowrap;
+    animation: moveRight 15s linear infinite;
+  }
+
+
+  .banner-text__special {
+    border-radius: 18px;
+    border: 8px solid #E7D4FF;
+    padding: 0 2px;
+  }
+
+  @media (max-width: 1200px) {
+    .site-logo__item {
+      width: 139px;
+      height: 20px;
+    }
+    .nav-toggle__icon {
+      width: 36px;
+      height: 36px;
+    }
+
+  }
+
+  @media (max-width: 576px) {
+    .site-logo__item {
+      width: 110px;
+    }
+
+    .nav-toggle__icon {
+      width: 26px;
+    }
+  }
+
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(0%); /* Boshlang'ich xatdan o'ngga ko'chirish */
+  }
+  to {
+    transform: translateX(-90%); /* Oxirgi xatdan chapga ko'chirish */
+  }
+}
+
