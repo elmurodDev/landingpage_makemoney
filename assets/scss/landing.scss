@@ -38,17 +38,24 @@ body {
     @include adaptive-value('font-size', 24, 12);
   }
 
-  .animated-text {
-    display: flex;
-    flex-direction: row;
-    @include adaptive-value('font-size', 32, 14);
-    @include adaptive-value('gap', 32, 14);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 112%; /* 35.84px */
-    color: #9C9C9C;
-    white-space: nowrap;
-    animation: moveRight 15s linear infinite;
+  .animated-box {
+    height: 272px;
+    width: 100%;
+
+    .track-horizontal {
+      white-space: nowrap;
+      will-change: transform;
+      animation: morquee-horizontal 15s linear infinite;
+      @include adaptive-value("gap", 32, 14);
+      .marquee-text {
+        color: #9C9C9C;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 112%; /* 35.84px */
+      }
+    }
+
   }
 
 
@@ -82,12 +89,12 @@ body {
 
 }
 
-@keyframes moveRight {
+@keyframes morquee-horizontal {
   from {
     transform: translateX(0%); /* Boshlang'ich xatdan o'ngga ko'chirish */
   }
   to {
-    transform: translateX(-90%); /* Oxirgi xatdan chapga ko'chirish */
+    transform: translateX(-50%); /* Oxirgi xatdan chapga ko'chirish */
   }
 }
 

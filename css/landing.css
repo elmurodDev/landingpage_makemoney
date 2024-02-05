@@ -82,27 +82,27 @@ body {
     font-size: calc(12px + 12 * (100vw - 320px) / 860);
   }
 }
-.wrapper .animated-text {
-  display: flex;
-  flex-direction: row;
-  font-size: 32px;
+.wrapper .animated-box {
+  height: 272px;
+  width: 100%;
+}
+.wrapper .animated-box .track-horizontal {
+  white-space: nowrap;
+  will-change: transform;
+  animation: morquee-horizontal 15s linear infinite;
   gap: 32px;
+}
+@media (max-width: 1180px) {
+  .wrapper .animated-box .track-horizontal {
+    gap: calc(14px + 18 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .animated-box .track-horizontal .marquee-text {
+  color: #9C9C9C;
+  font-size: 32px;
   font-style: normal;
   font-weight: 400;
   line-height: 112%; /* 35.84px */
-  color: #9C9C9C;
-  white-space: nowrap;
-  animation: moveRight 15s linear infinite;
-}
-@media (max-width: 1180px) {
-  .wrapper .animated-text {
-    font-size: calc(14px + 18 * (100vw - 320px) / 860);
-  }
-}
-@media (max-width: 1180px) {
-  .wrapper .animated-text {
-    gap: calc(14px + 18 * (100vw - 320px) / 860);
-  }
 }
 .wrapper .banner-text__special {
   border-radius: 18px;
@@ -128,12 +128,12 @@ body {
   }
 }
 
-@keyframes moveRight {
+@keyframes morquee-horizontal {
   from {
     transform: translateX(0%); /* Boshlang'ich xatdan o'ngga ko'chirish */
   }
   to {
-    transform: translateX(-90%); /* Oxirgi xatdan chapga ko'chirish */
+    transform: translateX(-50%); /* Oxirgi xatdan chapga ko'chirish */
   }
 }
 
