@@ -49,8 +49,12 @@ body {
   overflow-x: hidden;
 }
 
+.wrapper {
+  /* Text */
+}
 .wrapper .nav-link__item {
   padding: 12px 16px;
+  color: black;
 }
 .wrapper .site-logo__item {
   width: 140px;
@@ -109,10 +113,45 @@ body {
   border-radius: 50%;
   background: #000;
 }
+@media (max-width: 1180px) {
+  .wrapper .animated-box .animated-circle {
+    width: calc(100px + 60 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1180px) {
+  .wrapper .animated-box .animated-circle {
+    height: calc(100px + 60 * (100vw - 320px) / 860);
+  }
+}
 .wrapper .banner-text__special {
   border-radius: 18px;
   border: 8px solid #E7D4FF;
   padding: 0 2px;
+}
+.wrapper .banner-info__item {
+  margin: 5px 0;
+  width: 24%;
+}
+.wrapper .banner-info__item:nth-child(1) {
+  background-color: #BAFFAF;
+  color: #094000;
+}
+.wrapper .banner-info__item:nth-child(2) {
+  background-color: #FFECA9;
+  color: #4F3D00;
+}
+.wrapper .banner-info__item:nth-child(3) {
+  background-color: #E7D4FF;
+  color: #390081;
+}
+.wrapper .banner-info__item:nth-child(4) {
+  background-color: #FFD4D4;
+  color: #400000;
+}
+@media (max-width: 992px) {
+  .wrapper .banner-info__item {
+    width: 49%;
+  }
 }
 @media (max-width: 1200px) {
   .wrapper .site-logo__item {
@@ -124,6 +163,84 @@ body {
     height: 36px;
   }
 }
+.wrapper .circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #171717;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1180px) {
+  .wrapper .circle {
+    width: calc(100px + 60 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1180px) {
+  .wrapper .circle {
+    height: calc(100px + 60 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .circle .text {
+  font-size: 20px;
+}
+@media (max-width: 1180px) {
+  .wrapper .circle .text {
+    font-size: calc(16px + 4 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .circle:before,
+.wrapper .circle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid #171717;
+  border-radius: 50%;
+}
+.wrapper .circle:before {
+  animation: ripple 2s linear infinite;
+}
+.wrapper .circle:after {
+  animation: ripple 2s linear 1s infinite;
+}
+.wrapper .about-icon {
+  width: 82px;
+  height: 82px;
+}
+.wrapper .about-icon:nth-child(1) {
+  background-color: #FFECA9;
+}
+.wrapper .about-icon:nth-child(2) {
+  background-color: #E7D4FF;
+}
+.wrapper .about-icon:nth-child(3) {
+  background-color: #BAFFAF;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+.wrapper .text {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  margin: 0;
+}
 @media (max-width: 576px) {
   .wrapper .site-logo__item {
     width: 110px;
@@ -131,14 +248,17 @@ body {
   .wrapper .nav-toggle__icon {
     width: 26px;
   }
+  .wrapper .banner-info__item {
+    width: 100%;
+  }
 }
 
 @keyframes morquee-horizontal {
   from {
-    transform: translateX(0%); /* Boshlang'ich xatdan o'ngga ko'chirish */
+    transform: translateX(0%);
   }
   to {
-    transform: translateX(-46%); /* Oxirgi xatdan chapga ko'chirish */
+    transform: translateX(-40%);
   }
 }
 
