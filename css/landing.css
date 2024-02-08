@@ -50,6 +50,7 @@ body {
 }
 
 .wrapper {
+  /*Parallax style*/
   /* Text */
 }
 .wrapper .nav-link__item {
@@ -89,6 +90,11 @@ body {
 .wrapper .animated-box {
   height: 272px;
 }
+@media (max-width: 1180px) {
+  .wrapper .animated-box {
+    height: calc(170px + 102 * (100vw - 320px) / 860);
+  }
+}
 .wrapper .animated-box .track-horizontal {
   white-space: nowrap;
   will-change: transform;
@@ -106,6 +112,11 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 112%; /* 35.84px */
+}
+@media (max-width: 1180px) {
+  .wrapper .animated-box .track-horizontal .marquee-text {
+    font-size: calc(14px + 18 * (100vw - 320px) / 860);
+  }
 }
 .wrapper .animated-box .animated-circle {
   width: 160px;
@@ -147,6 +158,79 @@ body {
 .wrapper .banner-info__item:nth-child(4) {
   background-color: #FFD4D4;
   color: #400000;
+}
+.wrapper #parallax {
+  gap: 20px;
+  overflow-x: hidden;
+}
+@media (max-width: 1180px) {
+  .wrapper #parallax {
+    gap: calc(12px + 8 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .parallax-element {
+  gap: 20px;
+  width: fit-content;
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax-element {
+    gap: calc(12px + 8 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .parallax__item {
+  height: 333px;
+  width: 592px;
+  padding: 32px;
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax__item {
+    height: calc(250px + 83 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax__item {
+    width: calc(265px + 327 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax__item {
+    padding: calc(24px + 8 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .parallax__icon {
+  height: 64px;
+  width: 64px;
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax__icon {
+    height: calc(52px + 12 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax__icon {
+    width: calc(52px + 12 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .parallax__title {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 42px */
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax__title {
+    font-size: calc(14px + 14 * (100vw - 320px) / 860);
+  }
+}
+.wrapper .parallax__desc {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+}
+@media (max-width: 1180px) {
+  .wrapper .parallax__desc {
+    font-size: calc(12px + 8 * (100vw - 320px) / 860);
+  }
 }
 @media (max-width: 992px) {
   .wrapper .banner-info__item {

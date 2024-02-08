@@ -40,7 +40,7 @@ body {
   }
 
   .animated-box {
-    height: 272px;
+    @include adaptive-value("height", 272, 170);
 
     .track-horizontal {
       white-space: nowrap;
@@ -50,7 +50,7 @@ body {
 
       .marquee-text {
         color: #9C9C9C;
-        font-size: 32px;
+        @include adaptive-value("font-size", 32, 14);
         font-style: normal;
         font-weight: 400;
         line-height: 112%; /* 35.84px */
@@ -95,6 +95,41 @@ body {
   .banner-info__item:nth-child(4) {
     background-color: #FFD4D4;
     color: #400000;
+  }
+
+  /*Parallax style*/
+  #parallax {
+    @include adaptive-value("gap", 20, 12);
+    overflow-x: hidden;
+  }
+
+  .parallax-element {
+    @include adaptive-value("gap", 20, 12);
+    width: fit-content;
+  }
+
+  .parallax__item {
+    @include adaptive-value("height", 333, 250);
+    @include adaptive-value("width", 592, 265);
+    @include adaptive-value("padding", 32, 24);
+  }
+
+  .parallax__icon {
+    @include adaptive-value("height", 64, 52);
+    @include adaptive-value("width", 64, 52);
+  }
+
+  .parallax__title {
+    @include adaptive-value("font-size", 28, 14);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 42px */
+  }
+
+  .parallax__desc {
+    @include adaptive-value("font-size", 20, 12);
+    font-style: normal;
+    font-weight: 400;
   }
 
   @media (max-width: 992px) {
