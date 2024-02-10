@@ -368,6 +368,43 @@ body {
     margin-top: calc(55px + 65 * (100vw - 320px) / 860);
   }
 }
+.wrapper .step-card__item {
+  width: 32%;
+  cursor: pointer;
+}
+.wrapper .step-card__item:hover .circle-thing {
+  width: 48px;
+  height: 48px;
+}
+.wrapper .step-card__item:hover .circle-thing .circle-thing__item {
+  opacity: 1;
+}
+.wrapper .step-card__item .circle-thing {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.wrapper .step-card__item .circle-thing .circle-thing__item {
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.wrapper .step-card__item:nth-child(1) {
+  background-color: #FFD4D4;
+  border-radius: 8px;
+}
+.wrapper .step-card__item:nth-child(1) .circle-thing {
+  background-color: #FFA7A7;
+}
+.wrapper .step-card__item:nth-child(2) {
+  background-color: #FFD4D4;
+  border-radius: 8px;
+}
+.wrapper .step-card__item:nth-child(2) .circle-thing {
+  background-color: #FFA7A7;
+}
 @keyframes ripple {
   0% {
     transform: scale(1);
