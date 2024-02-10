@@ -246,7 +246,13 @@ body {
 
   .step-card__item {
     width: 32%;
+    height: 255px;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      border-radius: 24px;
+    }
 
     &:hover .circle-thing {
       width: 48px;
@@ -268,13 +274,14 @@ body {
       height: 24px;
       border-radius: 50%;
       transition: all 0.3s ease;
+      top: 32px;
+      left: 32px;
     }
 
   }
 
   .step-card__item:nth-child(1) {
     background-color: #FFD4D4;
-    border-radius: 8px;
 
     .circle-thing {
       background-color: #FFA7A7;
@@ -283,7 +290,6 @@ body {
 
   .step-card__item:nth-child(2) {
     background-color: #FFD4D4;
-    border-radius: 8px;
 
     .circle-thing {
       background-color: #FFA7A7;

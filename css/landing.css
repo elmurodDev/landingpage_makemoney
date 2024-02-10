@@ -370,7 +370,13 @@ body {
 }
 .wrapper .step-card__item {
   width: 32%;
+  height: 255px;
   cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.wrapper .step-card__item:hover {
+  border-radius: 24px;
 }
 .wrapper .step-card__item:hover .circle-thing {
   width: 48px;
@@ -384,6 +390,8 @@ body {
   height: 24px;
   border-radius: 50%;
   transition: all 0.3s ease;
+  top: 32px;
+  left: 32px;
 }
 .wrapper .step-card__item .circle-thing .circle-thing__item {
   width: 24px;
@@ -393,14 +401,12 @@ body {
 }
 .wrapper .step-card__item:nth-child(1) {
   background-color: #FFD4D4;
-  border-radius: 8px;
 }
 .wrapper .step-card__item:nth-child(1) .circle-thing {
   background-color: #FFA7A7;
 }
 .wrapper .step-card__item:nth-child(2) {
   background-color: #FFD4D4;
-  border-radius: 8px;
 }
 .wrapper .step-card__item:nth-child(2) .circle-thing {
   background-color: #FFA7A7;
