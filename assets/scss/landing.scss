@@ -132,6 +132,10 @@ body {
     font-weight: 400;
   }
 
+  .about-section, .benefits, .task-wrapper, .earning-step {
+    @include adaptive-value("margin-top", 120, 30);
+  }
+
   @media (max-width: 992px) {
     .banner-info__item {
       width: 49%;
@@ -201,6 +205,42 @@ body {
 
     &:nth-child(3) {
       background-color: #BAFFAF;
+    }
+
+
+  }
+
+  .task-wrapper {
+    background-color: #171717;
+    @include adaptive-value("padding-top", 120, 35);
+
+    .tasks {
+      color: #9C9C9C;
+      text-align: center;
+      @include adaptive-value("font-size", 32, 14);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .task__main-text {
+      @include adaptive-value("font-size", 75, 18);
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 112%;
+    }
+
+    .task__desc {
+      color: #9C9C9C;
+      text-align: center;
+      @include adaptive-value("font-size", 28, 14);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 125%; /* 40px */
+    }
+
+    .task__image {
+      @include adaptive-value("margin-top", 120, 55);
     }
   }
 
