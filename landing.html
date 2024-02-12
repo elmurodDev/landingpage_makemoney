@@ -20,31 +20,39 @@
             </a>
 
             <div class="sitenav-menu">
-                <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between align-items-center d-xl-none">
                     <span class="menu-text">Menu</span>
-                    <button type="button" class="btn d-flex align-items-center justify-content-center p-0 m-0">
+                    <button type="button" class="btn btn-x d-flex align-items-center justify-content-center p-0 m-0">
                         <img class="x-icon" src="./assets/images/X.svg" alt="Close">
                     </button>
                 </div>
-                <div class="nav-link d-flex flex-column justify-content-center align-items-center gap-3">
+                <div class="nav-link d-flex flex-column flex-xl-row justify-content-center align-items-center gap-1 gap-xl-3">
                     <a href="#" class="nav-link__item">Biz haqimizda</a>
                     <a href="#" class="nav-link__item">Afzalliklarimiz</a>
                     <a href="#" class="nav-link__item">Vazifalar</a>
                     <a href="#" class="nav-link__item">Pul topish qadamlari</a>
                     <a href="#" class="nav-link__item">Bog‘lanish</a>
                 </div>
-            </div>
-
-            <div class="nav-btns d-flex gap-3 align-items-center">
-                <div class="nav-btn__wrapper d-flex gap-3 align-items-center d-none d-sm-block">
-                    <button type="button" class="btn">
+                <div class="nav-btn__wrapper mt-auto d-flex flex-column gap-3 align-items-center d-md-none">
+                    <button type="button" class="btn btn-login">
                         Kirish
                     </button>
                     <button type="button" class="btn main-btn">
                         Ro'yhatdan o'tish
                     </button>
                 </div>
-                <button type="button" class="btn p-0 m-0 d-block d-xl-none">
+            </div>
+
+            <div class="nav-btns d-flex gap-3 align-items-center">
+                <div class="nav-btn__wrapper d-flex gap-3 align-items-center d-none d-sm-block">
+                    <button type="button" class="btn btn-login">
+                        Kirish
+                    </button>
+                    <button type="button" class="btn main-btn">
+                        Ro'yhatdan o'tish
+                    </button>
+                </div>
+                <button type="button" class="sitenav-menu__toggle btn p-0 m-0 d-block d-xl-none">
                     <img class="nav-toggle__icon" src="assets/images/Menu-trigger.svg" alt="Menu"/>
                 </button>
             </div>
@@ -162,8 +170,8 @@
                  data-paroller-type="foreground" data-paroller-direction="horizontal">
                 <div
                         class="parallax-element parallax-element__top d-flex"
-                        data-paroller-factor="0.5"
-                        data-paroller-factor-lg="0.4"
+                        data-paroller-factor="0.3"
+                        data-paroller-factor-lg="0.3"
                         data-paroller-factor-md="0.3"
                         data-paroller-factor-sm="-0.2"
                         data-paroller-factor-xs="-0.1"
@@ -185,47 +193,43 @@
 
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
-                            <img src="./assets/images/energy-Icon.svg" alt="system">
+                            <img src="./assets/images/clipboard.svg" alt="system">
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
-                            <h5 class="parallax__title">Yo‘naltiruvchi dastur</h5>
-                            <p class="parallax__desc">Vazifalarni bajarishni xohllamaysizmi? Shunchaki odamlarni jalb
-                                qiling va saytdagi barcha
-                                yakunlar va depozitlarning 30% gacha pul ishlang</p>
+                            <h5 class="parallax__title">Oddiy vazifalardan pul ishlang</h5>
+                            <p class="parallax__desc">Jiddiy ko‘nikmalarni talab qilmaydigan oddiy vazifalarni bajarib,
+                                oyiga bir necha yuz ming so‘m ishlab topishingiz mumkin
+                            </p>
                         </div>
                     </div>
 
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
-                            <img src="./assets/images/energy-Icon.svg" alt="system">
+                            <img src="./assets/images/data-icon.svg" alt="system">
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
-                            <h5 class="parallax__title">Yo‘naltiruvchi dastur</h5>
-                            <p class="parallax__desc">Vazifalarni bajarishni xohllamaysizmi? Shunchaki odamlarni jalb
-                                qiling va saytdagi barcha
-                                yakunlar va depozitlarning 30% gacha pul ishlang</p>
+                            <h5 class="parallax__title">Tez va qulay yechib olish</h5>
+                            <p class="parallax__desc">To‘lov uchun minimal summa 10 000 so‘m. Yechib olish uchun Uzcard yoki Humo plastik kartalari kerak bo‘ladi</p>
                         </div>
                     </div>
 
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
-                            <img src="./assets/images/energy-Icon.svg" alt="system">
+                            <img src="./assets/images/trending%20up.svg" alt="system">
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
-                            <h5 class="parallax__title">Yo‘naltiruvchi dastur</h5>
-                            <p class="parallax__desc">Vazifalarni bajarishni xohllamaysizmi? Shunchaki odamlarni jalb
-                                qiling va saytdagi barcha
-                                yakunlar va depozitlarning 30% gacha pul ishlang</p>
+                            <h5 class="parallax__title">Reyting tizimi</h5>
+                            <p class="parallax__desc">Reyting tizimi sizga mos ijrochilarni tanlash imkonini beradi. To‘lov sizning tasdiqlovchingizdan keyin amalga oshiriladi</p>
                         </div>
                     </div>
                 </div>
 
                 <div
-                        class="parallax-element parallax-element__bottom d-flex"
-                        data-paroller-factor="-0.4"
-                        data-paroller-factor-lg="-0.3"
+                        class="parallax-element parallax-element__bottom d-flex flex-row-reverse"
+                        data-paroller-factor="-0.2"
+                        data-paroller-factor-lg="-0.2"
                         data-paroller-factor-md="-0.2"
-                        data-paroller-factor-sm="0.2"
+                        data-paroller-factor-sm="0.1"
                         data-paroller-factor-xs="0.1"
                         data-paroller-type="foreground"
                         data-paroller-direction="horizontal"
@@ -246,37 +250,33 @@
 
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
-                            <img src="./assets/images/energy-Icon.svg" alt="system">
+                            <img src="./assets/images/clipboard.svg" alt="system">
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
-                            <h5 class="parallax__title">Yo‘naltiruvchi dastur</h5>
-                            <p class="parallax__desc">Vazifalarni bajarishni xohllamaysizmi? Shunchaki odamlarni jalb
-                                qiling va saytdagi barcha
-                                yakunlar va depozitlarning 30% gacha pul ishlang</p>
+                            <h5 class="parallax__title">Oddiy vazifalardan pul ishlang</h5>
+                            <p class="parallax__desc">Jiddiy ko‘nikmalarni talab qilmaydigan oddiy vazifalarni bajarib,
+                                oyiga bir necha yuz ming so‘m ishlab topishingiz mumkin
+                            </p>
                         </div>
                     </div>
 
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
-                            <img src="./assets/images/energy-Icon.svg" alt="system">
+                            <img src="./assets/images/data-icon.svg" alt="system">
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
-                            <h5 class="parallax__title">Yo‘naltiruvchi dastur</h5>
-                            <p class="parallax__desc">Vazifalarni bajarishni xohllamaysizmi? Shunchaki odamlarni jalb
-                                qiling va saytdagi barcha
-                                yakunlar va depozitlarning 30% gacha pul ishlang</p>
+                            <h5 class="parallax__title">Tez va qulay yechib olish</h5>
+                            <p class="parallax__desc">To‘lov uchun minimal summa 10 000 so‘m. Yechib olish uchun Uzcard yoki Humo plastik kartalari kerak bo‘ladi</p>
                         </div>
                     </div>
 
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
-                            <img src="./assets/images/energy-Icon.svg" alt="system">
+                            <img src="./assets/images/trending%20up.svg" alt="system">
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
-                            <h5 class="parallax__title">Yo‘naltiruvchi dastur</h5>
-                            <p class="parallax__desc">Vazifalarni bajarishni xohllamaysizmi? Shunchaki odamlarni jalb
-                                qiling va saytdagi barcha
-                                yakunlar va depozitlarning 30% gacha pul ishlang</p>
+                            <h5 class="parallax__title">Reyting tizimi</h5>
+                            <p class="parallax__desc">Reyting tizimi sizga mos ijrochilarni tanlash imkonini beradi. To‘lov sizning tasdiqlovchingizdan keyin amalga oshiriladi</p>
                         </div>
                     </div>
                 </div>
@@ -446,7 +446,8 @@
                           <a href="#" class="footer__link">Pul topish qadamlari</a>
                           <a href="#" class="footer__link">Bog‘lanish</a>
                         </span>
-                    <button type="button" class="btn d-flex align-items-center justify-content-end gap-1 gap-lg-3 col-6 col-lg-1 order-1 order-lg-2"
+                    <button type="button"
+                            class="btn d-flex align-items-center justify-content-end gap-1 gap-lg-3 col-6 col-lg-1 order-1 order-lg-2"
                             data-bs-toggle="modal"
                             data-bs-target="#languageModal">
                         O‘zbekcha
