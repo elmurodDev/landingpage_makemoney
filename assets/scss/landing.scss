@@ -7,6 +7,62 @@ body {
   overflow-x: hidden;
 }
 
+.main-input {
+  width: 100%;
+  //height: 44px;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #F2F2F2;
+}
+
+section.section {
+  @include adaptive-value("margin-top", 120, 30);
+}
+
+.section-title {
+  color: #000;
+  text-align: center;
+  @include adaptive-value("font-size", 32, 20);
+  @include adaptive-value("margin-bottom", 40, 20);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 40px */
+}
+
+input.main-input {
+  height: 44px;
+}
+
+textarea.main-input {
+  height: 115px;
+}
+
+.main-btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #49A2E1;
+  color: #ffffff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+
+  &:hover {
+    background: #368FCE;
+    color: white;
+  }
+
+  &:active {
+    background-color: #3186c4 !important;
+    color: white !important;
+  }
+}
+
 .wrapper {
   .nav-link__item {
     padding: 12px 16px;
@@ -22,6 +78,32 @@ body {
   .nav-toggle__icon {
     width: 26px;
     height: 26px;
+  }
+
+  .sitenav-menu {
+    padding: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    .menu-text {
+      color: #000;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 36px */
+    }
+
+    .x-icon {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   .banner-desc {
@@ -132,9 +214,6 @@ body {
     font-weight: 400;
   }
 
-  .about-section, .benefits, .task-wrapper, .earning-step {
-    @include adaptive-value("margin-top", 120, 30);
-  }
 
   @media (max-width: 992px) {
     .banner-info__item {
@@ -154,9 +233,23 @@ body {
 
   }
 
-  .circle {
+  .begin-circle {
     @include adaptive-value("width", 160, 100);
     @include adaptive-value("height", 160, 100);
+  }
+
+  .header-video-play {
+    @include adaptive-value("width", 96, 42);
+    @include adaptive-value("height", 96, 42);
+  }
+
+  .short-video__circle {
+    @include adaptive-value("width", 94, 32);
+    @include adaptive-value("height", 94, 32);
+  }
+
+  .circle {
+
     border-radius: 50%;
     background-color: #171717;
     position: fixed;
@@ -164,7 +257,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    & .text {
+    &:active {
+      background-color: #424141;
+    }
+
+    &.text {
       @include adaptive-value("font-size", 20, 16);
     }
   }
@@ -250,17 +347,56 @@ body {
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
+    overflow: hidden;
+
+
+    &::before {
+      content: "";
+      width: 235px;
+      height: 235px;
+      position: absolute;
+      transform: translate(20%, 50%);
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+      transition: all 0.3s linear;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      width: 235px;
+      height: 235px;
+      position: absolute;
+      transform: translate(20%, 50%);
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 0.3s linear;
+      z-index: -1;
+    }
+
     &:hover {
       border-radius: 24px;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+
+    &:hover::after {
+      opacity: 1;
     }
 
     &:hover .circle-thing {
       width: 48px;
       height: 48px;
     }
+
     &:hover .circle-thing .circle-thing__item {
       opacity: 1;
     }
+
 
     .circle-thing {
       .circle-thing__item {
@@ -282,17 +418,84 @@ body {
 
   .step-card__item:nth-child(1) {
     background-color: #FFD4D4;
+    color: #400000;
 
     .circle-thing {
       background-color: #FFA7A7;
     }
+
+    &::before {
+      background: url("../assets/images/step-card1_before.svg") 0 0 no-repeat;
+    }
+
+    &::after {
+      background: url("../assets/images/step-card1_after.svg") 0 0 no-repeat;
+    }
   }
 
   .step-card__item:nth-child(2) {
-    background-color: #FFD4D4;
+    background-color: #BAFFAF;
+    color: #094000;
 
     .circle-thing {
-      background-color: #FFA7A7;
+      background-color: #5BFF40;
+    }
+
+    &::before {
+      background: url("../assets/images/step-card2_before.svg") 0 0 no-repeat;
+    }
+
+    &::after {
+      background: url("../assets/images/step-card2_after.svg") 0 0 no-repeat;
+    }
+  }
+
+  .step-card__item:nth-child(3) {
+    background-color: #E7D4FF;
+    color: #390081;
+
+    .circle-thing {
+      background-color: #D8B9FF;
+    }
+
+    &::before {
+      background: url("../assets/images/step-card3_before.svg") 0 0 no-repeat;
+    }
+
+    &::after {
+      background: url("../assets/images/step-card3_after.svg") 0 0 no-repeat;
+    }
+  }
+
+
+  .step-card__title {
+    @include adaptive-value("font-size", 24, 16);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+    @include adaptive-value("margin-bottom", 10, 5);
+  }
+
+  .step-card__desc {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+
+  .contact-img__wrapper {
+    width: 55%;
+    border-radius: 8px;
+    @include adaptive-value("height", 350, 200);
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .contact-form {
+    width: 44%;
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
 
@@ -330,6 +533,49 @@ body {
     .banner-info__item {
       width: 100%;
     }
+  }
+
+  @media (max-width: 768px) {
+
+    .step-cards {
+      display: flex;
+      flex-direction: column !important;
+      gap: 15px;
+    }
+    .step-card__item {
+      width: 100%;
+    }
+  }
+
+}
+
+.footer {
+  @include adaptive-value("margin-top", 100, 30);
+
+  &__desktop {
+    background-color: #F2F2F2;
+    padding: 0 20px 0 10px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+  }
+
+  &__lang {
+    border: none;
+    background: transparent;
+    padding: 8px 16px;
+  }
+
+  &__privacy {
+    color: #9a9a9a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
   }
 
 }
