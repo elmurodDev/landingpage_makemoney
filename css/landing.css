@@ -47,6 +47,7 @@ button {
 body {
   font-family: "Inter", sans-serif !important;
   overflow-x: hidden;
+  background-color: #ffffff;
 }
 
 .main-input {
@@ -117,6 +118,10 @@ textarea.main-input {
   color: white !important;
 }
 
+.btn-login:hover {
+  background-color: #E0E0E0;
+}
+
 .wrapper {
   /*Parallax style*/
   /* Text */
@@ -134,29 +139,63 @@ textarea.main-input {
   width: 26px;
   height: 26px;
 }
-.wrapper .sitenav-menu {
-  padding: 32px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ffffff;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(-100%);
+@media (max-width: 1200px) {
+  .wrapper .sitenav-menu {
+    padding: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
 }
-.wrapper .sitenav-menu .menu-text {
-  color: #000;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%; /* 36px */
+@media (max-width: 1200px) and (max-width: 1180px) {
+  .wrapper .sitenav-menu {
+    padding: calc(20px + 12 * (100vw - 320px) / 860);
+  }
 }
-.wrapper .sitenav-menu .x-icon {
-  width: 44px;
-  height: 44px;
+@media (max-width: 1200px) {
+  .wrapper .sitenav-menu .menu-text {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+  }
+  .wrapper .sitenav-menu .x-icon {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 1180px) {
+  .wrapper .sitenav-menu .x-icon {
+    width: calc(20px + 24 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1200px) and (max-width: 1180px) {
+  .wrapper .sitenav-menu .x-icon {
+    height: calc(20px + 24 * (100vw - 320px) / 860);
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper .sitenav-menu .nav-link__item {
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .wrapper .sitenav-menu .nav-link__item:hover {
+    background-color: #E0E0E0;
+  }
+}
+.wrapper .sitenav-menu__active {
+  transform: translateY(0) !important;
 }
 .wrapper .banner-desc .seo-text {
   font-size: 80px;
@@ -269,6 +308,62 @@ textarea.main-input {
     gap: calc(12px + 8 * (100vw - 320px) / 860);
   }
 }
+.wrapper .parallax-element__top .parallax__item:nth-child(1) {
+  background-color: #E7D4FF;
+  color: #390081;
+}
+.wrapper .parallax-element__top .parallax__item:nth-child(1) .parallax__icon {
+  background-color: #D8B9FF;
+}
+.wrapper .parallax-element__top .parallax__item:nth-child(2) {
+  background-color: #FFD4D4;
+  color: #400000;
+}
+.wrapper .parallax-element__top .parallax__item:nth-child(2) .parallax__icon {
+  background-color: #FFA7A7;
+}
+.wrapper .parallax-element__top .parallax__item:nth-child(3) {
+  background-color: #BAFFAF;
+  color: #094000;
+}
+.wrapper .parallax-element__top .parallax__item:nth-child(3) .parallax__icon {
+  background-color: #5BFF40;
+}
+.wrapper .parallax-element__top .parallax__item:nth-child(4) {
+  background-color: #FFECA9;
+  color: #4F3D00;
+}
+.wrapper .parallax-element__top .parallax__item:nth-child(4) .parallax__icon {
+  background-color: #FFD749;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(1) {
+  background-color: #E7D4FF;
+  color: #390081;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(1) .parallax__icon {
+  background-color: #D8B9FF;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(2) {
+  background-color: #FFD4D4;
+  color: #400000;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(2) .parallax__icon {
+  background-color: #FFA7A7;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(3) {
+  background-color: #BAFFAF;
+  color: #094000;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(3) .parallax__icon {
+  background-color: #5BFF40;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(4) {
+  background-color: #FFECA9;
+  color: #4F3D00;
+}
+.wrapper .parallax-element__bottom .parallax__item:nth-child(4) .parallax__icon {
+  background-color: #FFD749;
+}
 .wrapper .parallax__item {
   height: 333px;
   width: 592px;
@@ -292,6 +387,7 @@ textarea.main-input {
 .wrapper .parallax__icon {
   height: 64px;
   width: 64px;
+  border-radius: 50%;
 }
 @media (max-width: 1180px) {
   .wrapper .parallax__icon {
