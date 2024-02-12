@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/landing.css">
     <title>Document</title>
 </head>
@@ -18,12 +19,20 @@
                 <img class="site-logo__item" src="./assets/images/logo.svg" alt="Makemoney">
             </a>
 
-            <div class="nav-link d-flex align-items-center gap-3 d-none d-xl-block">
-                <a href="#" class="nav-link__item">Biz haqimizda</a>
-                <a href="#" class="nav-link__item">Afzalliklarimiz</a>
-                <a href="#" class="nav-link__item">Vazifalar</a>
-                <a href="#" class="nav-link__item">Pul topish qadamlari</a>
-                <a href="#" class="nav-link__item">Bog‘lanish</a>
+            <div class="sitenav-menu">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="menu-text">Menu</span>
+                    <button type="button" class="btn d-flex align-items-center justify-content-center p-0 m-0">
+                        <img class="x-icon" src="./assets/images/X.svg" alt="Close">
+                    </button>
+                </div>
+                <div class="nav-link d-flex flex-column justify-content-center align-items-center gap-3">
+                    <a href="#" class="nav-link__item">Biz haqimizda</a>
+                    <a href="#" class="nav-link__item">Afzalliklarimiz</a>
+                    <a href="#" class="nav-link__item">Vazifalar</a>
+                    <a href="#" class="nav-link__item">Pul topish qadamlari</a>
+                    <a href="#" class="nav-link__item">Bog‘lanish</a>
+                </div>
             </div>
 
             <div class="nav-btns d-flex gap-3 align-items-center">
@@ -31,7 +40,7 @@
                     <button type="button" class="btn">
                         Kirish
                     </button>
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn main-btn">
                         Ro'yhatdan o'tish
                     </button>
                 </div>
@@ -78,9 +87,9 @@
                     </div>
                 </div>
                 <div class="animated-wave position-absolute start-50 top-50 translate-middle rounded-circle d-flex justify-content-center align-items-center">
-                    <div class="circle d-flex justify-content-center align-items-center">
-                        <h3 class="text text-white">Boshlash</h3>
-                    </div>
+                    <button class="btn text text-white circle begin-circle d-flex justify-content-center align-items-center">
+                        Boshlash
+                    </button>
                 </div>
             </div>
         </div>
@@ -111,46 +120,57 @@
 
     <!--  Start Main section  -->
     <main>
-        <div class="container">
-            <div class="about-section">
-                <h4 class="text-center mb-3">
-                    Biz haqimizda
-                </h4>
-                <div class="row gap-3 gap-lg-0 d-flex flex-column-reverse flex-lg-row">
-                    <div class="d-flex flex-column col-12 col-lg-4 justify-content-center gap-2">
-                        <div class="d-flex gap-3 mb-4">
-                            <span class="about-icon fs-1 d-flex justify-content-center align-items-center rounded-circle">💰</span>
-                            <span class="about-icon fs-1 d-flex justify-content-center align-items-center rounded-circle">🎉</span>
-                            <span class="about-icon fs-1 d-flex justify-content-center align-items-center rounded-circle">📢</span>
+        <section class="section about">
+            <div class="container">
+                <div class="about-section">
+                    <h4 class="section-title text-center">
+                        Biz haqimizda
+                    </h4>
+                    <div class="row gap-3 gap-lg-0 d-flex flex-column-reverse flex-lg-row">
+                        <div class="d-flex flex-column col-12 col-lg-4 justify-content-center gap-2">
+                            <div class="d-flex gap-3 mb-4">
+                                <span class="about-icon fs-1 d-flex justify-content-center align-items-center rounded-circle">💰</span>
+                                <span class="about-icon fs-1 d-flex justify-content-center align-items-center rounded-circle">🎉</span>
+                                <span class="about-icon fs-1 d-flex justify-content-center align-items-center rounded-circle">📢</span>
+                            </div>
+                            <h5>
+                                Pul topishni boshlang va hayotingizni yaxshilang
+                            </h5>
+                            <p>
+                                Hayotingizni yaxshilash uchun o‘zingizga yoqqan vazifalarni bajaring.
+                            </p>
+                            <div>
+                                <button class="btn main-btn w-auto">Pul topishni boshlash</button>
+                            </div>
                         </div>
-                        <h5>
-                            Pul topishni boshlang va hayotingizni yaxshilang
-                        </h5>
-                        <p>
-                            Hayotingizni yaxshilash uchun o‘zingizga yoqqan vazifalarni bajaring.
-                        </p>
-                        <div>
-                            <button class="btn btn-primary w-auto">Pul topishni boshlash</button>
+                        <div class="col-12 col-lg-8 rounded overflow-hidden position-relative">
+                            <img class="w-100 h-100" src="./assets/images/image01.png" alt="Image number one"/>
+                            <div class="animated-wave position-absolute start-50 top-50 translate-middle rounded-circle d-flex justify-content-center align-items-center">
+                                <button class="btn circle header-video-play d-flex justify-content-center align-items-center">
+                                    <img src="./assets/images/play.svg" alt="Play">
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-8 rounded overflow-hidden">
-                        <img class="w-100 h-100" src="./assets/images/image01.png" alt="Image number one"/>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="benefits">
-            <h3 class="text-center mb-3">Afzalliklari</h3>
+        </section>
+
+        <section class="section benefits">
+            <h3 class="section-title text-center">Afzalliklari</h3>
             <div id="parallax" class="d-flex flex-column my-paroller" data-paroller-factor="0.3"
                  data-paroller-type="foreground" data-paroller-direction="horizontal">
-                <div class="parallax-element parallax-element__top d-flex" data-paroller-factor="0.5"
-                     data-paroller-factor-lg="0.4"
-                     data-paroller-factor-md="0.3"
-                     data-paroller-factor-sm="-0.2"
-                     data-paroller-factor-xs="-0.1"
-                     data-paroller-type="foreground"
-                     data-paroller-direction="horizontal"
-                     data-paroller-transition="transform .2s linear">
+                <div
+                        class="parallax-element parallax-element__top d-flex"
+                        data-paroller-factor="0.5"
+                        data-paroller-factor-lg="0.4"
+                        data-paroller-factor-md="0.3"
+                        data-paroller-factor-sm="-0.2"
+                        data-paroller-factor-xs="-0.1"
+                        data-paroller-type="foreground"
+                        data-paroller-direction="horizontal"
+                        data-paroller-transition="transform .2s linear"
+                >
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
                             <img src="./assets/images/energy-Icon.svg" alt="system">
@@ -200,15 +220,18 @@
                     </div>
                 </div>
 
-                <div class="parallax-element parallax-element__bottom d-flex"
-                     data-paroller-factor="-0.4"
-                     data-paroller-factor-lg="-0.3"
-                     data-paroller-factor-md="-0.2"
-                     data-paroller-factor-sm="0.2"
-                     data-paroller-factor-xs="0.1"
-                     data-paroller-type="foreground"
-                     data-paroller-direction="horizontal"
-                     data-paroller-transition="transform .2s linear">
+                <div
+                        class="parallax-element parallax-element__bottom d-flex"
+                        data-paroller-factor="-0.4"
+                        data-paroller-factor-lg="-0.3"
+                        data-paroller-factor-md="-0.2"
+                        data-paroller-factor-sm="0.2"
+                        data-paroller-factor-xs="0.1"
+                        data-paroller-type="foreground"
+                        data-paroller-direction="horizontal"
+                        data-paroller-transition="transform .2s linear"
+                >
+
                     <div class="parallax__item d-flex flex-column justify-content-between rounded border">
                         <span class="parallax__icon d-flex justify-content-center align-items-center">
                             <img src="./assets/images/energy-Icon.svg" alt="system">
@@ -258,11 +281,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="task-wrapper w-100">
+        <section class="section task-wrapper w-100">
             <div class="container">
-                <div class="text-container w-100 d-flex flex-column gap-2 gap-lg-3">
+                <div class="text-container w-100 d-flex flex-column gap-2 gap-lg-3" data-aos="fade-up"
+                     data-aos-anchor-placement="top-center">
                     <span class="text-center tasks">Vazifalar</span>
                     <h2 class="text-center text-white task__main-text">
                         Like bosing, obuna bo‘ling <br> va video tamosha qiling
@@ -273,55 +297,227 @@
                         Siz xoxlagan bir vazifalarni bajarish orqali pul topasiz
                     </p>
                 </div>
-                <div class="task__image w-100">
+                <div class="task__image w-100" data-aos="fade-up"
+                     data-aos-anchor-placement="top-center">
                     <img class="task__image-item w-100 object-fit-contain" src="./assets/images/tasks.svg" alt="Tasks">
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="earning-step">
+        <section class="section earning-step">
             <div class="container">
                 <div class="step-container">
-                    <h4 class="step__title text-center">
+                    <h4 class="step__title section-title text-center">
                         Pul topish qadamlari
                     </h4>
                     <div class="step-cards d-flex justify-content-between">
-                        <div class="step-card__item position-relative p-1 p-md-2 p-lg-3">
-                            <div>
-                                <span class="circle-thing d-flex justify-content-center align-items-center">
+                        <div data-aos="flip-left"
+                             class="step-card__item position-relative p-3 p-lg-3 d-flex flex-column justify-content-center gap-0">
+                            <span class="circle-thing d-flex justify-content-center align-items-center position-absolute translate-middle">
                                 <img class="circle-thing__item" src="./assets/images/step-card1.svg" alt="Card1">
                             </span>
-                            </div>
-                            <h5>Ro‘yxatdan o‘ting</h5>
-                            <p>Ro‘yxatdan o‘tib o‘zingizga yoqqan vazifalarni bajaring</p>
+                            <h5 class="step-card__title">Ro‘yxatdan o‘ting</h5>
+                            <p class="step-card__desc">Ro‘yxatdan o‘tib o‘zingizga yoqqan vazifalarni bajaring</p>
                         </div>
 
-                        <div class="step-card__item position-relative p-1 p-md-2 p-lg-3">
-                            <div>
-                                <span class="circle-thing d-flex justify-content-center align-items-center">
-                                <img class="circle-thing__item" src="./assets/images/step-card1.svg" alt="Card1">
+                        <div data-aos="flip-left"
+                             class="step-card__item position-relative p-3 p-lg-3 d-flex flex-column justify-content-center gap-0">
+                            <span class="circle-thing d-flex justify-content-center align-items-center position-absolute translate-middle">
+                                <img class="circle-thing__item" src="./assets/images/step-card2.svg" alt="Card1">
                             </span>
-                            </div>
-                            <h5>Ro‘yxatdan o‘ting</h5>
-                            <p>Ro‘yxatdan o‘tib o‘zingizga yoqqan vazifalarni bajaring</p>
+                            <h5 class="step-card__title">Ro‘yxatdan o‘ting</h5>
+                            <p class="step-card__desc">Ro‘yxatdan o‘tib o‘zingizga yoqqan vazifalarni bajaring</p>
                         </div>
 
+                        <div data-aos="flip-left"
+                             class="step-card__item position-relative p-3 p-lg-3 d-flex flex-column justify-content-center gap-0">
+                            <span class="circle-thing d-flex justify-content-center align-items-center position-absolute translate-middle">
+                                <img class="circle-thing__item" src="./assets/images/step-card3.svg" alt="Card1">
+                            </span>
+                            <h5 class="step-card__title">Ro‘yxatdan o‘ting</h5>
+                            <p class="step-card__desc">Ro‘yxatdan o‘tib o‘zingizga yoqqan vazifalarni bajaring</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="section short-video">
+            <div class="container">
+                <div class="video-wrapper" data-aos="zoom-in">
+                    <h4 class="step__title text-center section-title">
+                        Qisqacha video dars
+                    </h4>
+                    <div class="video-tag position-relative">
+                        <img class="w-100 object-fit-contain" src="./assets/images/video-face.png" alt="Vudeo">
+                        <div class="animated-wave position-absolute start-50 top-50 translate-middle rounded-circle d-flex justify-content-center align-items-center">
+                            <button class="btn circle short-video__circle d-flex justify-content-center align-items-center">
+                                <img src="./assets/images/play.svg" alt="Play">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" data-aos="zoom-in">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <h4 class="step__title text-center section-title">
+                        Bog‘lanish
+                    </h4>
+                    <div class="contact-section d-flex align-items-center gap-3 flex-column flex-md-row">
+                        <div class="contact-img__wrapper overflow-hidden">
+                            <img src="./assets/images/contact.png" class="w-100 object-fit-contain" alt="Contact">
+                        </div>
+
+                        <form class="contact-form d-flex flex-column gap-3">
+                            <input name="full_name" type="text" class="main-input" placeholder="Ism Familiya">
+                            <input name="phone" type="text" class="main-input" placeholder="+998 00 000 00 00">
+                            <textarea class="main-input" name="message" cols="1" rows="10"
+                                      placeholder="Izoh"></textarea>
+                            <button class="btn main-btn" type="submit">Bog‘lanish</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
     <!--  Start Footer section  -->
-    <footer>
-
+    <!-- =================================================== Start FOOTER here  ========================================== -->
+    <footer class="footer w-100">
+        <!-- This footer shows only desktop version  -->
+        <div class="footer__desktop">
+            <div class="container">
+                <div class="footer__row d-flex justify-content-between align-items-center py-3 row">
+                    <div class="footer__logo d-flex align-items-center flex-row col-6 col-lg-1 order-lg-0">
+                        <a href="#" class="footer__logo-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="110" height="21" viewBox="0 0 110 21"
+                                 fill="none">
+                                <g clip-path="url(#clip0_86_862)">
+                                    <path
+                                            d="M10.565 0.34535H0.10603C0.0744723 0.34535 0.0564394 0.380351 0.0722181 0.408351L5.2341 9.10002C5.25439 9.13502 5.30849 9.12102 5.30849 9.07902V5.06569C5.30849 5.04235 5.32652 5.02368 5.34906 5.02368H8.30193C8.31546 5.02368 8.32898 5.03068 8.33574 5.04235L11.7687 10.668C11.7845 10.6937 11.8206 10.6937 11.8364 10.668L15.2693 5.04235C15.2761 5.03068 15.2896 5.02368 15.3032 5.02368H18.3146C18.3372 5.02368 18.3552 5.04235 18.3552 5.06569V9.07202C18.3552 9.11402 18.4071 9.12802 18.4296 9.09302L23.7087 0.406019C23.7245 0.378019 23.7064 0.343018 23.6749 0.343018H12.9814C12.9679 0.343018 12.9566 0.350018 12.9499 0.361685L11.9198 1.88302C11.904 1.90402 11.8747 1.90635 11.8566 1.88535L10.5943 0.359349C10.5876 0.350016 10.5763 0.34535 10.565 0.34535Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M11.7417 20.573L7.51074 13.8297C7.49271 13.7993 7.48369 13.7667 7.48369 13.7317V8.68468C7.48369 8.58435 7.56259 8.50502 7.65726 8.50502H8.31095C8.37181 8.50502 8.43042 8.54002 8.46197 8.59369L11.7394 14.4177C11.8071 14.5367 11.9716 14.5367 12.0392 14.4177L15.3167 8.59369C15.3482 8.53769 15.4046 8.50502 15.4677 8.50502H16.1214C16.2183 8.50502 16.295 8.58669 16.295 8.68468V13.7387C16.295 13.7737 16.2859 13.8087 16.2679 13.8367L12.037 20.573C11.9648 20.6827 11.8093 20.6827 11.7417 20.573Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M24.0491 13.9114V4.16502H28.1515L29.6978 8.89935H30.0337L31.58 4.16502H35.6825V13.9114H32.6552V9.03702L32.8581 7.78402H32.7228L31.3771 11.683H28.3499L27.0042 7.78402H26.8689L27.0718 9.03702V13.9114H24.0491Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M37.7766 13.083C37.1883 12.3924 36.8952 11.4614 36.8952 10.2924C36.8952 9.12338 37.1883 8.19237 37.7766 7.50171C38.3649 6.81104 39.0794 6.46338 39.9225 6.46338C40.5333 6.46338 41.0653 6.66404 41.5229 7.06304C41.719 7.23104 41.8813 7.42471 42.0075 7.64871H42.1428V6.67338H44.9672V13.9137H42.1428V12.9384H42.0075C41.8903 13.1694 41.7303 13.37 41.5229 13.538C41.0743 13.9277 40.5401 14.1237 39.9225 14.1237C39.0794 14.119 38.3626 13.7737 37.7766 13.083ZM40.1299 9.22604C39.9022 9.48971 39.7872 9.84671 39.7872 10.29C39.7872 10.7357 39.9022 11.0904 40.1299 11.3564C40.3575 11.62 40.6483 11.753 40.9977 11.753C41.311 11.753 41.5815 11.6177 41.8046 11.3494C42.0278 11.081 42.1405 10.7287 42.1405 10.29C42.1405 9.85371 42.0278 9.50138 41.8046 9.23071C41.5815 8.96238 41.311 8.82704 40.9977 8.82704C40.6483 8.82938 40.3598 8.96237 40.1299 9.22604Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M46.1775 13.9114V4.16502H49.0019V9.03935H49.5407L50.8187 6.67102H53.7107L51.9075 10.0824L53.9114 13.9114H51.0193L49.6736 11.4753H49.0019V13.9114H46.1775Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M54.9054 12.992C54.1525 12.2407 53.7761 11.326 53.7761 10.248C53.7761 9.17235 54.148 8.27168 54.8919 7.54602C55.6357 6.82268 56.587 6.46102 57.7433 6.46102C58.8997 6.46102 59.8622 6.83202 60.6286 7.57402C61.395 8.31602 61.7782 9.20735 61.7782 10.248V10.7077H56.6681C56.7042 11.116 56.8282 11.438 57.0378 11.676C57.2474 11.9117 57.5066 12.0307 57.8109 12.0307C58.1513 12.0307 58.4218 11.928 58.6179 11.725C58.7171 11.6224 58.7847 11.5174 58.8208 11.4054H61.7128C61.5595 11.8977 61.3093 12.3527 60.9599 12.7704C60.18 13.671 59.1071 14.1213 57.7456 14.1213C56.605 14.119 55.6605 13.7434 54.9054 12.992ZM56.6681 9.52469H58.8208C58.7757 9.34035 58.7126 9.17702 58.6314 9.03702C58.4241 8.71268 58.1288 8.54935 57.7433 8.54935C57.3579 8.54935 57.0626 8.71268 56.8552 9.03702C56.7763 9.17702 56.7132 9.34035 56.6681 9.52469Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M62.7204 13.9114V6.67102H65.5448V7.64635H65.68C65.8153 7.42235 65.9753 7.22868 66.1646 7.06068C66.6042 6.66168 67.1159 6.46102 67.6974 6.46102C68.3241 6.46102 68.8763 6.66869 69.3519 7.08869C69.5683 7.28235 69.7329 7.49235 69.8501 7.71402H69.9853C70.1025 7.49235 70.2671 7.28235 70.4835 7.08869C70.9591 6.67102 71.5114 6.46102 72.138 6.46102C72.963 6.46102 73.6054 6.71768 74.0675 7.23335C74.5296 7.74902 74.7595 8.48869 74.7595 9.45469V13.9114H71.9351V9.94235C71.9351 9.59935 71.8607 9.33802 71.7142 9.16302C71.5677 8.98802 71.3716 8.89935 71.1282 8.89935C70.8148 8.89935 70.5669 9.00202 70.3888 9.20502C70.2085 9.41035 70.1206 9.70202 70.1206 10.0824V13.9114H67.3638V9.94235C67.3638 9.59935 67.2894 9.33802 67.1407 9.16302C66.9919 8.98569 66.798 8.89935 66.5546 8.89935C66.2413 8.89935 65.9933 9.00202 65.8153 9.20502C65.6372 9.40802 65.547 9.70202 65.547 10.0824V13.9114H62.7204Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M76.7634 13.034C76.0105 12.3107 75.6341 11.396 75.6341 10.29C75.6341 9.18635 76.0105 8.27168 76.7634 7.54602C77.5163 6.82268 78.5081 6.46102 79.7366 6.46102C80.965 6.46102 81.9568 6.82268 82.7097 7.54602C83.4626 8.26935 83.839 9.18402 83.839 10.29C83.839 11.396 83.4626 12.3083 82.7097 13.034C81.9568 13.7573 80.965 14.1213 79.7366 14.1213C78.5081 14.1213 77.5185 13.7573 76.7634 13.034ZM78.862 9.16302C78.6388 9.43135 78.5261 9.80702 78.5261 10.29C78.5261 10.773 78.6388 11.1487 78.862 11.417C79.0851 11.6853 79.3782 11.8207 79.7366 11.8207C80.095 11.8207 80.3857 11.6853 80.6112 11.417C80.8343 11.1487 80.947 10.773 80.947 10.29C80.947 9.80702 80.8343 9.43135 80.6112 9.16302C80.3857 8.89469 80.095 8.75935 79.7366 8.75935C79.3782 8.75935 79.0874 8.89469 78.862 9.16302Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M84.7812 13.9114V6.67102H87.6056V7.64635H87.7409C87.8761 7.43169 88.0452 7.23802 88.2525 7.06068C88.7462 6.66168 89.2691 6.46102 89.8259 6.46102C90.6239 6.46102 91.2505 6.71768 91.7013 7.23335C92.1521 7.74902 92.3798 8.48869 92.3798 9.45469V13.9114H89.5554V9.94235C89.5554 9.24702 89.2646 8.89702 88.6808 8.89702C88.3675 8.89702 88.1083 9.01135 87.9077 9.23768C87.7071 9.46402 87.6056 9.76968 87.6056 10.15V13.909H84.7812V13.9114Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M94.3859 12.992C93.6331 12.2407 93.2566 11.326 93.2566 10.248C93.2566 9.17235 93.6286 8.27168 94.3724 7.54602C95.1163 6.82268 96.0675 6.46102 97.2239 6.46102C98.3802 6.46102 99.3427 6.83202 100.109 7.57402C100.875 8.31602 101.259 9.20735 101.259 10.248V10.7077H96.1464C96.1825 11.116 96.3064 11.438 96.5161 11.676C96.7257 11.9117 96.9849 12.0307 97.2892 12.0307C97.6296 12.0307 97.9001 11.928 98.0962 11.725C98.1954 11.6224 98.263 11.5174 98.2991 11.4054H101.191C101.038 11.8977 100.788 12.3527 100.438 12.7704C99.6583 13.671 98.5853 14.1213 97.2239 14.1213C96.0855 14.119 95.1388 13.7434 94.3859 12.992ZM96.1464 9.52469H98.2991C98.254 9.34035 98.1909 9.17702 98.1097 9.03702C97.9023 8.71268 97.6071 8.54935 97.2216 8.54935C96.8362 8.54935 96.5409 8.71268 96.3335 9.03702C96.2546 9.17702 96.1915 9.34035 96.1464 9.52469Z"
+                                            fill="#959595"/>
+                                    <path
+                                            d="M101.73 6.67102H104.554L105.629 11.4054H105.898L107.04 6.67102H109.932L107.309 16.5574H104.484L105.224 13.9114H103.488L101.73 6.67102Z"
+                                            fill="#959595"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_86_862">
+                                        <rect width="110" height="21" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <span class="footer__list-wrapper d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-5 col-12 col-lg-9 order-2 order-lg-1 flex-wrap">
+                          <a href="#" class="footer__link">Biz haqimizda</a>
+                          <a href="#" class="footer__link">Afzalliklarimiz</a>
+                          <a href="#" class="footer__link">Vazifalar</a>
+                          <a href="#" class="footer__link">Pul topish qadamlari</a>
+                          <a href="#" class="footer__link">Bog‘lanish</a>
+                        </span>
+                    <button type="button" class="btn d-flex align-items-center justify-content-end gap-1 gap-lg-3 col-6 col-lg-1 order-1 order-lg-2"
+                            data-bs-toggle="modal"
+                            data-bs-target="#languageModal">
+                        O‘zbekcha
+                        <img src="./assets/images/Select.png" alt="Language">
+                    </button>
+                </div>
+                <div class="footer__row border-top d-flex justify-content-between align-items-center py-3 row">
+                    <span class="footer__privacy col-9">&copy; Megasoft — barcha huquqlar himoyalangan!</span>
+                    <div class="footer__media  col-3 d-flex gap-3 align-items-center justify-content-end">
+                        <a href="#" class="footer__youtube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path d="M17 20H7C4 20 2 18 2 15V9C2 6 4 4 7 4H17C20 4 22 6 22 9V15C22 18 20 20 17 20Z"
+                                      fill="#D4D4D4"/>
+                                <path
+                                        d="M11.4201 9.48997L13.8901 10.97C14.8301 11.54 14.8301 12.46 13.8901 13.03L11.4201 14.51C10.4201 15.11 9.6001 14.65 9.6001 13.48V10.51C9.6001 9.34997 10.4201 8.88997 11.4201 9.48997Z"
+                                        fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__insta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path
+                                        d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
+                                        fill="#D4D4D4"/>
+                                <path
+                                        d="M12.0001 15.88C14.143 15.88 15.8801 14.1429 15.8801 12C15.8801 9.85713 14.143 8.12 12.0001 8.12C9.85725 8.12 8.12012 9.85713 8.12012 12C8.12012 14.1429 9.85725 15.88 12.0001 15.88Z"
+                                        fill="black"/>
+                                <path
+                                        d="M17 7.50003C16.73 7.50003 16.48 7.40003 16.29 7.21003C16.2 7.11003 16.13 7.00003 16.08 6.88003C16.03 6.76003 16 6.63003 16 6.50003C16 6.37003 16.03 6.24003 16.08 6.12003C16.13 5.99003 16.2 5.89003 16.29 5.79003C16.52 5.56003 16.87 5.45003 17.19 5.52003C17.26 5.53003 17.32 5.55003 17.38 5.58003C17.44 5.60003 17.5 5.63003 17.56 5.67003C17.61 5.70003 17.66 5.75003 17.71 5.79003C17.8 5.89003 17.87 5.99003 17.92 6.12003C17.97 6.24003 18 6.37003 18 6.50003C18 6.63003 17.97 6.76003 17.92 6.88003C17.87 7.00003 17.8 7.11003 17.71 7.21003C17.61 7.30003 17.5 7.37003 17.38 7.42003C17.26 7.47003 17.13 7.50003 17 7.50003Z"
+                                        fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__telegram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path
+                                        d="M7.1099 5.96003L16.1299 2.95003C20.1799 1.60003 22.3799 3.81003 21.0399 7.86003L18.0299 16.88C16.0099 22.95 12.6899 22.95 10.6699 16.88L9.7799 14.2L7.0999 13.31C1.0399 11.3 1.0399 7.99003 7.1099 5.96003Z"
+                                        fill="#D4D4D4"/>
+                                <path d="M12.1201 11.6301L15.9301 7.81006L12.1201 11.6301Z" fill="black"/>
+                                <path
+                                        d="M12.1201 12.38C11.9301 12.38 11.7401 12.31 11.5901 12.16C11.3001 11.87 11.3001 11.39 11.5901 11.1L15.3901 7.28C15.6801 6.99 16.1601 6.99 16.4501 7.28C16.7401 7.57 16.7401 8.05 16.4501 8.34L12.6501 12.16C12.5001 12.3 12.3101 12.38 12.1201 12.38Z"
+                                        fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path
+                                        d="M16.19 2H7.82001C4.18001 2 2.01001 4.17 2.01001 7.81V16.18C2.01001 19.82 4.18001 21.99 7.82001 21.99H16.19C19.83 21.99 22 19.82 22 16.18V7.81C22 4.17 19.83 2 16.19 2Z"
+                                        fill="#D4D4D4"/>
+                                <path
+                                        d="M13.92 9.27995L13.97 12.23L16.6 12.19C16.79 12.19 16.93 12.36 16.9 12.54L16.55 14.45C16.52 14.59 16.4 14.69 16.26 14.7L14.01 14.74L14.13 21.99L11.13 22.04L11.01 14.79L9.30997 14.82C9.13997 14.82 9.00998 14.69 9.00998 14.52L8.97998 12.62C8.97998 12.45 9.10997 12.32 9.27997 12.32L10.98 12.29L10.93 9.03996C10.9 7.37996 12.22 6.01995 13.88 5.98995L16.58 5.94995C16.75 5.94995 16.88 6.07995 16.88 6.24995L16.92 8.64996C16.92 8.81996 16.79 8.94995 16.62 8.94995L14.22 8.98995C14.05 8.97995 13.92 9.11995 13.92 9.27995Z"
+                                        fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <!-- /FOOTER -->
 
 </section>
 <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="./assets/js/jquery.js"></script>
 <script src="./assets/js/jquery.paroller.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./assets/js/landing.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
