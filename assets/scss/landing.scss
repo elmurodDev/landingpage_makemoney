@@ -71,6 +71,10 @@ textarea.main-input {
 }
 
 .wrapper {
+  nav.nav {
+    z-index: 99;
+  }
+
   .nav-link__item {
     padding: 12px 16px;
     color: black;
@@ -101,6 +105,7 @@ textarea.main-input {
       flex-direction: column;
       transform: translateY(-100%);
       transition: all 0.3s ease-in-out;
+
       .menu-text {
         color: #000;
         font-size: 24px;
@@ -119,6 +124,7 @@ textarea.main-input {
         border-radius: 8px;
         text-align: center;
         padding: 20px 0;
+
         &:hover {
           background-color: #E0E0E0;
         }
@@ -128,6 +134,10 @@ textarea.main-input {
 
   .sitenav-menu__active {
     transform: translateY(0) !important;
+  }
+
+  .banner {
+    @include adaptive-value("margin-top", 90, 50);
   }
 
   .banner-desc {
@@ -215,7 +225,7 @@ textarea.main-input {
   }
 
   .parallax-element__top {
-    .parallax__item:nth-child(1){
+    .parallax__item:nth-child(1) {
       background-color: #E7D4FF;
       color: #390081;
 
@@ -224,7 +234,7 @@ textarea.main-input {
       }
     }
 
-    .parallax__item:nth-child(2){
+    .parallax__item:nth-child(2) {
       background-color: #FFD4D4;
       color: #400000;
 
@@ -233,7 +243,7 @@ textarea.main-input {
       }
     }
 
-    .parallax__item:nth-child(3){
+    .parallax__item:nth-child(3) {
       background-color: #BAFFAF;
       color: #094000;
 
@@ -242,7 +252,7 @@ textarea.main-input {
       }
     }
 
-    .parallax__item:nth-child(4){
+    .parallax__item:nth-child(4) {
       background-color: #FFECA9;
       color: #4F3D00;
 
@@ -253,7 +263,7 @@ textarea.main-input {
   }
 
   .parallax-element__bottom {
-    .parallax__item:nth-child(1){
+    .parallax__item:nth-child(1) {
       background-color: #E7D4FF;
       color: #390081;
 
@@ -262,7 +272,7 @@ textarea.main-input {
       }
     }
 
-    .parallax__item:nth-child(2){
+    .parallax__item:nth-child(2) {
       background-color: #FFD4D4;
       color: #400000;
 
@@ -271,7 +281,7 @@ textarea.main-input {
       }
     }
 
-    .parallax__item:nth-child(3){
+    .parallax__item:nth-child(3) {
       background-color: #BAFFAF;
       color: #094000;
 
@@ -280,7 +290,7 @@ textarea.main-input {
       }
     }
 
-    .parallax__item:nth-child(4){
+    .parallax__item:nth-child(4) {
       background-color: #FFECA9;
       color: #4F3D00;
 
