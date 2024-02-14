@@ -53,9 +53,9 @@ body {
 .main-input {
   width: 100%;
   padding: 16px;
-  border: none;
   border-radius: 8px;
   background-color: #F2F2F2;
+  resize: none;
 }
 
 section.section {

@@ -375,11 +375,27 @@
                             <img src="./assets/images/contact.png" class="w-100 object-fit-contain" alt="Contact">
                         </div>
 
-                        <form class="contact-form d-flex flex-column gap-3">
-                            <input name="full_name" type="text" class="main-input" placeholder="Ism Familiya">
-                            <input name="phone" type="text" class="main-input" placeholder="+998 00 000 00 00">
-                            <textarea class="main-input" name="message" cols="1" rows="10"
-                                      placeholder="Izoh"></textarea>
+                        <form class="contact-form d-flex flex-column gap-3 needs-validation" novalidate>
+                            <label for="full_name">
+                                <input name="full_name" type="text" class="main-input form-control"
+                                       placeholder="Ism Familiya" id="full_name" required>
+                                <span class="invalid-feedback">
+                                    Bu maydon to'ldirilishi shart.
+                                </span>
+                            </label>
+                            <label for="phone">
+                                <input name="phone" id="phone" type="text" class="main-input form-control" placeholder="+998 00 000 00 00" required>
+                                <span class="invalid-feedback">
+                                    Bu maydon to'ldirilishi shart.
+                                </span>
+                            </label>
+                            <label for="message">
+                                <textarea class="main-input form-control" name="message" cols="1" rows="10"
+                                          placeholder="Izoh" id="message" required></textarea>
+                                <span class="invalid-feedback">
+                                    Bu maydon to'ldirilishi shart.
+                                </span>
+                            </label>
                             <button class="btn main-btn" type="submit">Bog‘lanish</button>
                         </form>
                     </div>
@@ -519,6 +535,7 @@
 
 </section>
 <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="./assets/bootstrap/js/validation.js"></script>
 <script src="./assets/js/jquery.js"></script>
 <script src="./assets/js/jquery.paroller.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
