@@ -27,11 +27,11 @@
                     </button>
                 </div>
                 <div class="nav-link d-flex flex-column flex-xl-row justify-content-center align-items-center gap-1 gap-xl-3">
-                    <a href="#" class="nav-link__item">Biz haqimizda</a>
-                    <a href="#" class="nav-link__item">Afzalliklarimiz</a>
-                    <a href="#" class="nav-link__item">Vazifalar</a>
-                    <a href="#" class="nav-link__item">Pul topish qadamlari</a>
-                    <a href="#" class="nav-link__item">Bog‘lanish</a>
+                    <a href="#about-us" class="nav-link__item">Biz haqimizda</a>
+                    <a href="#benefit" class="nav-link__item">Afzalliklarimiz</a>
+                    <a href="#task" class="nav-link__item">Vazifalar</a>
+                    <a href="#steps" class="nav-link__item">Pul topish qadamlari</a>
+                    <a href="#contact" class="nav-link__item">Bog‘lanish</a>
                 </div>
                 <div class="nav-btn__wrapper mt-auto d-flex flex-column gap-3 align-items-center d-md-none">
                     <button type="button" class="btn btn-login">
@@ -128,7 +128,7 @@
 
     <!--  Start Main section  -->
     <main>
-        <section class="section about">
+        <section class="section about" id="about-us">
             <div class="container">
                 <div class="about-section">
                     <h4 class="section-title text-center">
@@ -164,7 +164,7 @@
             </div>
         </section>
 
-        <section class="section benefits">
+        <section class="section benefits" id="benefit">
             <h3 class="section-title text-center">Afzalliklari</h3>
             <div id="parallax" class="d-flex flex-column my-paroller" data-paroller-factor="0.3"
                  data-paroller-type="foreground" data-paroller-direction="horizontal">
@@ -209,7 +209,8 @@
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
                             <h5 class="parallax__title">Tez va qulay yechib olish</h5>
-                            <p class="parallax__desc">To‘lov uchun minimal summa 10 000 so‘m. Yechib olish uchun Uzcard yoki Humo plastik kartalari kerak bo‘ladi</p>
+                            <p class="parallax__desc">To‘lov uchun minimal summa 10 000 so‘m. Yechib olish uchun Uzcard
+                                yoki Humo plastik kartalari kerak bo‘ladi</p>
                         </div>
                     </div>
 
@@ -219,7 +220,8 @@
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
                             <h5 class="parallax__title">Reyting tizimi</h5>
-                            <p class="parallax__desc">Reyting tizimi sizga mos ijrochilarni tanlash imkonini beradi. To‘lov sizning tasdiqlovchingizdan keyin amalga oshiriladi</p>
+                            <p class="parallax__desc">Reyting tizimi sizga mos ijrochilarni tanlash imkonini beradi.
+                                To‘lov sizning tasdiqlovchingizdan keyin amalga oshiriladi</p>
                         </div>
                     </div>
                 </div>
@@ -266,7 +268,8 @@
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
                             <h5 class="parallax__title">Tez va qulay yechib olish</h5>
-                            <p class="parallax__desc">To‘lov uchun minimal summa 10 000 so‘m. Yechib olish uchun Uzcard yoki Humo plastik kartalari kerak bo‘ladi</p>
+                            <p class="parallax__desc">To‘lov uchun minimal summa 10 000 so‘m. Yechib olish uchun Uzcard
+                                yoki Humo plastik kartalari kerak bo‘ladi</p>
                         </div>
                     </div>
 
@@ -276,14 +279,15 @@
                         </span>
                         <div class="d-flex flex-column gap-0 gap-md-1 gap-lg-2">
                             <h5 class="parallax__title">Reyting tizimi</h5>
-                            <p class="parallax__desc">Reyting tizimi sizga mos ijrochilarni tanlash imkonini beradi. To‘lov sizning tasdiqlovchingizdan keyin amalga oshiriladi</p>
+                            <p class="parallax__desc">Reyting tizimi sizga mos ijrochilarni tanlash imkonini beradi.
+                                To‘lov sizning tasdiqlovchingizdan keyin amalga oshiriladi</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section task-wrapper w-100">
+        <section class="section task-wrapper w-100" id="task">
             <div class="container">
                 <div class="text-container w-100 d-flex flex-column gap-2 gap-lg-3" data-aos="fade-up"
                      data-aos-anchor-placement="top-center">
@@ -304,7 +308,7 @@
             </div>
         </section>
 
-        <section class="section earning-step">
+        <section class="section earning-step" id="steps">
             <div class="container">
                 <div class="step-container">
                     <h4 class="step__title section-title text-center">
@@ -360,7 +364,7 @@
             </div>
         </section>
 
-        <section class="section contact" data-aos="zoom-in">
+        <section class="section contact" data-aos="zoom-in" id="contact">
             <div class="container">
                 <div class="contact-wrapper">
                     <h4 class="step__title text-center section-title">
@@ -371,11 +375,27 @@
                             <img src="./assets/images/contact.png" class="w-100 object-fit-contain" alt="Contact">
                         </div>
 
-                        <form class="contact-form d-flex flex-column gap-3">
-                            <input name="full_name" type="text" class="main-input" placeholder="Ism Familiya">
-                            <input name="phone" type="text" class="main-input" placeholder="+998 00 000 00 00">
-                            <textarea class="main-input" name="message" cols="1" rows="10"
-                                      placeholder="Izoh"></textarea>
+                        <form class="contact-form d-flex flex-column gap-3 needs-validation" novalidate>
+                            <label for="full_name">
+                                <input name="full_name" type="text" class="main-input form-control"
+                                       placeholder="Ism Familiya" id="full_name" required>
+                                <span class="invalid-feedback">
+                                    Bu maydon to'ldirilishi shart.
+                                </span>
+                            </label>
+                            <label for="phone">
+                                <input name="phone" id="phone" type="text" class="main-input form-control" placeholder="+998 00 000 00 00" required>
+                                <span class="invalid-feedback">
+                                    Bu maydon to'ldirilishi shart.
+                                </span>
+                            </label>
+                            <label for="message">
+                                <textarea class="main-input form-control" name="message" cols="1" rows="10"
+                                          placeholder="Izoh" id="message" required></textarea>
+                                <span class="invalid-feedback">
+                                    Bu maydon to'ldirilishi shart.
+                                </span>
+                            </label>
                             <button class="btn main-btn" type="submit">Bog‘lanish</button>
                         </form>
                     </div>
@@ -440,16 +460,18 @@
                         </a>
                     </div>
                     <span class="footer__list-wrapper d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-5 col-12 col-lg-9 order-2 order-lg-1 flex-wrap">
-                          <a href="#" class="footer__link">Biz haqimizda</a>
-                          <a href="#" class="footer__link">Afzalliklarimiz</a>
-                          <a href="#" class="footer__link">Vazifalar</a>
-                          <a href="#" class="footer__link">Pul topish qadamlari</a>
-                          <a href="#" class="footer__link">Bog‘lanish</a>
-                        </span>
-                    <button type="button"
+                        <a href="#about-us" class="footer__link">Biz haqimizda</a>
+                        <a href="#benefit" class="footer__link">Afzalliklarimiz</a>
+                        <a href="#task" class="footer__link">Vazifalar</a>
+                        <a href="#steps" class="footer__link">Pul topish qadamlari</a>
+                        <a href="#contact" class="footer__link">Bog‘lanish</a>
+                    </span>
+                    <button
+                            type="button"
                             class="btn d-flex align-items-center justify-content-end gap-1 gap-lg-3 col-6 col-lg-1 order-1 order-lg-2"
                             data-bs-toggle="modal"
-                            data-bs-target="#languageModal">
+                            data-bs-target="#languageModal"
+                    >
                         O‘zbekcha
                         <img src="./assets/images/Select.png" alt="Language">
                     </button>
@@ -513,6 +535,7 @@
 
 </section>
 <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="./assets/bootstrap/js/validation.js"></script>
 <script src="./assets/js/jquery.js"></script>
 <script src="./assets/js/jquery.paroller.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
