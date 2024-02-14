@@ -3,7 +3,8 @@ $('.parallax-element__bottom').paroller();
 
 const menuBtn = document.querySelector(".sitenav-menu__toggle"),
   menuContent = document.querySelector(".sitenav-menu"),
-  xButton = document.querySelector(".btn-x")
+  xButton = document.querySelector(".btn-x"),
+  navButtons = document.querySelectorAll(".nav-link__item")
 
 //
 function openNavMenu() {
@@ -24,7 +25,7 @@ menuBtn.addEventListener("click", () => {
   }
 })
 
-xButton.addEventListener("click", ()=>{
+xButton.addEventListener("click", () => {
   closeNavMenu()
 })
 
@@ -34,11 +35,19 @@ window.addEventListener("resize", () => {
   }
 })
 
-document.addEventListener("DOMContentLoaded", function() {
+navButtons.forEach(nav => {
+  nav.addEventListener("click", () => {
+    if (menuContent.classList.contains("sitenav-menu__active")) {
+      closeNavMenu()
+    }
+  })
+})
+
+document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("video");
   const playButton = document.getElementById("playButton");
 
-  playButton.addEventListener("click", function() {
+  playButton.addEventListener("click", function () {
     video.play();
     playButton.classList.add('d-none'); // Hide the play button
   });
