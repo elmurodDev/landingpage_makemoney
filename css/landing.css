@@ -126,6 +126,9 @@ textarea.main-input {
   /*Parallax style*/
   /* Text */
 }
+.wrapper nav.nav {
+  z-index: 99;
+}
 .wrapper .nav-link__item {
   padding: 12px 16px;
   color: black;
@@ -196,6 +199,14 @@ textarea.main-input {
 }
 .wrapper .sitenav-menu__active {
   transform: translateY(0) !important;
+}
+.wrapper .banner {
+  margin-top: 90px;
+}
+@media (max-width: 1180px) {
+  .wrapper .banner {
+    margin-top: calc(50px + 40 * (100vw - 320px) / 860);
+  }
 }
 .wrapper .banner-desc .seo-text {
   font-size: 80px;
