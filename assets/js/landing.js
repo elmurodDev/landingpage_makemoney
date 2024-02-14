@@ -33,3 +33,13 @@ window.addEventListener("resize", () => {
     closeNavMenu()
   }
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+  const video = document.getElementById("video");
+  const playButton = document.getElementById("playButton");
+
+  playButton.addEventListener("click", function() {
+    video.play();
+    playButton.classList.add('d-none'); // Hide the play button
+  });
+});
