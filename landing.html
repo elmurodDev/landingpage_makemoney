@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/landing.css">
     <title>Document</title>
 </head>
@@ -154,9 +154,9 @@
                         <div class="col-12 col-lg-8 rounded overflow-hidden position-relative">
                             <img class="w-100 h-100" src="./assets/images/image01.png" alt="Image number one"/>
                             <div class="animated-wave position-absolute start-50 top-50 translate-middle rounded-circle d-flex justify-content-center align-items-center">
-                                <button class="btn circle header-video-play d-flex justify-content-center align-items-center">
+                                <a href="#short-video" class="btn circle header-video-play d-flex justify-content-center align-items-center">
                                     <img src="./assets/images/play.svg" alt="Play">
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -346,16 +346,20 @@
             </div>
         </section>
 
-        <section class="section short-video">
+        <section class="section short-video" id="short-video">
             <div class="container">
                 <div class="video-wrapper" data-aos="zoom-in">
                     <h4 class="step__title text-center section-title">
                         Qisqacha video dars
                     </h4>
-                    <div class="video-tag position-relative">
-                        <img class="w-100 object-fit-contain" src="./assets/images/video-face.png" alt="Vudeo">
+                    <div class="video-tag position-relative ">
+                        <video class="w-100 h-100 rounded" controls id="video">
+                            <source src="assets/video/1%20Minute%20Timer.mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
                         <div class="animated-wave position-absolute start-50 top-50 translate-middle rounded-circle d-flex justify-content-center align-items-center">
-                            <button class="btn circle short-video__circle d-flex justify-content-center align-items-center">
+                            <button class="btn circle short-video__circle d-flex justify-content-center align-items-center" id="playButton">
                                 <img src="./assets/images/play.svg" alt="Play">
                             </button>
                         </div>
@@ -384,7 +388,8 @@
                                 </span>
                             </label>
                             <label for="phone">
-                                <input name="phone" id="phone" type="text" class="main-input form-control" placeholder="+998 00 000 00 00" required>
+                                <input name="phone" id="phone" type="text" class="main-input form-control"
+                                       placeholder="+998 00 000 00 00" required>
                                 <span class="invalid-feedback">
                                     Bu maydon to'ldirilishi shart.
                                 </span>
@@ -538,7 +543,7 @@
 <script src="./assets/bootstrap/js/validation.js"></script>
 <script src="./assets/js/jquery.js"></script>
 <script src="./assets/js/jquery.paroller.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./assets/js/aos.js"></script>
 <script src="./assets/js/landing.js"></script>
 <script>
   AOS.init();
