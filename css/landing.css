@@ -97,7 +97,7 @@ textarea.main-input {
 
 .main-btn {
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 8px 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -118,8 +118,22 @@ textarea.main-input {
   color: white !important;
 }
 
+.btn-login {
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: white;
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
 .btn-login:hover {
   background-color: #E0E0E0;
+}
+
+.nav-btn__wrapper {
+  gap: 16px !important;
 }
 
 .wrapper {
